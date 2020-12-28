@@ -1,7 +1,7 @@
 <template>
   <div>
     Logged in
-    <div v-if="loggedIn">Yes</div>
+    <div v-if="loggedIn">YES</div>
     <div v-else>No</div>
     <button class="but" @click="signOut">Sign out</button>
   </div>

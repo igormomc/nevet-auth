@@ -3,11 +3,17 @@
     <div class="error" v-if="error">{{error.message}}</div>
     <form @submit.prevent="pressed">
       Register
+      <div class="name">
+          <input type="text" v-model="name" placeholder="Navn"/>
+      </div>
+      <div class="number">
+          <input type="text" v-model="number" placeholder="Mobil Nummer"/>
+      </div>
       <div class="email">
-        <input type="email" v-model="email" placeholder="email" />
+        <input type="email" v-model="email" placeholder="Email" />
       </div>
       <div class="password">
-        <input type="password" v-model="password" placeholder="password" />
+        <input type="password" v-model="password" placeholder="Password" />
       </div>
       <button type="submit">Register</button>
     </form>
@@ -21,6 +27,7 @@ import "firebase/auth";
 export default {
   data() {
     return {
+      name: "",
       email: "",
       password: "",
       error: ""
